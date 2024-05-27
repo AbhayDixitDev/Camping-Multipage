@@ -1,0 +1,1105 @@
+@charset "UTF-8";
+* {
+  padding: 0px;
+  margin: 0px; }
+
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden; }
+
+body::-webkit-scrollbar {
+  display: none; }
+
+.sticky {
+  display: block;
+  justify-content: sp;
+  opacity: 0.5;
+  border: 1px solid orangered;
+  border-radius: 10px;
+  background-color: orangered;
+  position: fixed;
+  top: 200px;
+  right: 0px;
+  width: 20px;
+  height: 120px;
+  z-index: 5;
+  padding: 10px; }
+  .sticky i {
+    font-size: 20px;
+    color: white;
+    margin-top: 10px; }
+
+#label1 {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 20px;
+  color: white; }
+
+#nav1 {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  background-color: #363333;
+  color: white; }
+
+#input1:checked ~ #nav1 {
+  display: none; }
+
+#input1:checked ~ #label1 {
+  display: none; }
+
+#cart {
+  background-color: white;
+  z-index: 2;
+  border: 1px solid black;
+  justify-self: flex-end;
+  width: 30vw;
+  height: 100vh;
+  display: none;
+  right: 0px;
+  top: 0px;
+  position: absolute;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 50px; }
+  #cart .cart1 .cart1-1 {
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; }
+  #cart .cart1 .cart1-2 {
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; }
+  #cart .cart2 a {
+    text-decoration: none; }
+    #cart .cart2 a i {
+      font-size: 32px;
+      font-weight: 600; }
+
+#cart:target {
+  display: flex; }
+
+#sidemenu:target {
+  display: flex; }
+
+#sidemenu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 20px;
+  width: 90vw;
+  height: 94vh; }
+  #sidemenu .sidemenu-1 .sidemenu-0 {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    font-size: 24px; }
+  #sidemenu .sidemenu-1 div {
+    width: 300px;
+    padding-bottom: 10px; }
+    #sidemenu .sidemenu-1 div a {
+      text-decoration: none;
+      font-size: 24px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-weight: 600; }
+  #sidemenu .sidemenu-1 .sidemenu-1-1::after {
+    float: right;
+    content: "⯆";
+    font-size: 14px;
+    color: orangered; }
+  #sidemenu .sidemenu-1 .sidemenu-1-1:hover::after {
+    content: " ⯅";
+    color: green;
+    transition: 0.2s; }
+  #sidemenu .sidemenu-2 {
+    display: flex;
+    flex-direction: column; }
+    #sidemenu .sidemenu-2 .sidemenu-2-1 {
+      font-size: 24px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-weight: 600;
+      margin-bottom: 20px; }
+    #sidemenu .sidemenu-2 .sidemenu-2-2 {
+      width: 250px;
+      background-color: red;
+      border: 1px solid red;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      #sidemenu .sidemenu-2 .sidemenu-2-2 a {
+        font-size: 20px;
+        padding: 5px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 600;
+        color: white;
+        text-decoration: none; }
+    #sidemenu .sidemenu-2 .sidemenu-2-3 {
+      width: 250px;
+      background-color: white;
+      border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      #sidemenu .sidemenu-2 .sidemenu-2-3 a {
+        font-size: 20px;
+        padding: 5px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 600;
+        color: black;
+        text-decoration: none; }
+
+.hero {
+  background-color: white;
+  height: 6vh; }
+  .hero .nav-main .nav {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    align-items: center; }
+    .hero .nav-main .nav .bar {
+      display: none; }
+      .hero .nav-main .nav .bar a i {
+        color: black;
+        font-size: 20px; }
+    .hero .nav-main .nav .nav-left ul {
+      display: flex;
+      list-style-type: none;
+      justify-content: space-evenly;
+      align-items: center; }
+      .hero .nav-main .nav .nav-left ul li {
+        padding: 10px; }
+        .hero .nav-main .nav .nav-left ul li a {
+          text-decoration: none;
+          color: black;
+          font-size: 20px; }
+    .hero .nav-main .nav .nav-middle {
+      align-items: center; }
+      .hero .nav-main .nav .nav-middle img {
+        width: 100px; }
+    .hero .nav-main .nav .nav-right ul {
+      list-style-type: none;
+      display: flex;
+      align-items: center; }
+      .hero .nav-main .nav .nav-right ul li {
+        padding: 10px; }
+    .hero .nav-main .nav .nav-right ul li i {
+      color: black; }
+    .hero .nav-main .nav .nav-right ul li:hover i {
+      color: red; }
+
+.home {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  padding-left: 200px;
+  padding-right: 200px; }
+  .home a {
+    color: black; }
+
+.dropdown1:hover .home {
+  color: white; }
+  .dropdown1:hover .home a {
+    color: white;
+    text-decoration: underline; }
+.dropdown1:hover .home1 {
+  display: grid; }
+
+.home1 {
+  width: 100vw;
+  position: absolute;
+  display: none;
+  left: 0;
+  top: 80px;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  z-index: 2;
+  height: 90vh;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  overflow-x: hidden !important; }
+
+.home1 div {
+  display: flex;
+  flex-direction: column;
+  width: 80px;
+  margin-left: 60px; }
+  .home1 div a {
+    margin: 5px;
+    text-decoration: none;
+    color: black;
+    text-decoration: none;
+    display: block; }
+
+.home::after {
+  content: " ";
+  width: 0%;
+  height: 2px;
+  background-color: red;
+  color: white; }
+
+.home:hover::after {
+  width: 100%;
+  transition: 0.6s; }
+
+.home a::after {
+  content: " ⯆";
+  font-size: 14px;
+  color: orangered; }
+
+.home a:hover::after {
+  content: " ⯅";
+  color: green;
+  transition: 0.2s; }
+
+.home1 div::after {
+  content: " ";
+  width: 0%;
+  height: 2px;
+  background-color: green; }
+
+.home1 div:hover::after {
+  width: 100%;
+  transition: 0.6s; }
+
+.shop {
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  display: flex; }
+
+.shop::after {
+  content: " ";
+  width: 0%;
+  height: 2px;
+  background-color: red;
+  color: white; }
+
+.shop:hover::after {
+  width: 100%;
+  transition: 0.6s; }
+
+.shop:hover a {
+  color: black !important; }
+
+.shop a::after {
+  content: " ⯆";
+  font-size: 14px;
+  color: orangered; }
+
+.shop a:hover::after {
+  content: " ⯅";
+  color: green;
+  transition: 0.2s; }
+
+.dropdown2:hover .shop a {
+  color: black !important;
+  text-decoration: underline; }
+.dropdown2:hover .shop1 {
+  display: flex; }
+
+.shop1 {
+  height: 55vh;
+  width: 100vw;
+  position: absolute;
+  display: none;
+  flex-direction: row;
+  justify-content: space-evenly;
+  left: 0;
+  top: 80px;
+  z-index: 2;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  overflow-x: hidden !important; }
+  .shop1 .shop1-1 {
+    display: grid;
+    grid-template-columns: auto auto auto auto; }
+    .shop1 .shop1-1 div {
+      display: flex;
+      flex-direction: column;
+      margin-left: 60px; }
+      .shop1 .shop1-1 div a {
+        text-decoration: none; }
+  .shop1 .shop1-2 {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    align-items: center; }
+    .shop1 .shop1-2 img {
+      width: 400px; }
+    .shop1 .shop1-2 div {
+      font-size: 24px;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      font-weight: 600; }
+    .shop1 .shop1-2 .btn {
+      height: 40px;
+      background-color: brown; }
+      .shop1 .shop1-2 .btn a {
+        padding: 20px;
+        text-decoration: none;
+        color: white; }
+
+.shop1-1 div::after {
+  content: " ";
+  width: 0%;
+  height: 2px;
+  background-color: green; }
+
+.shop1-1 div:hover::after {
+  width: 100%;
+  transition: 0.6s; }
+
+.shop1 shop1-1 div {
+  width: 80px;
+  padding: 80px; }
+  .shop1 shop1-1 div a {
+    margin: 5px;
+    text-decoration: none;
+    color: red;
+    color: black;
+    text-decoration: none;
+    display: block; }
+
+.pages {
+  display: flex;
+  flex-direction: column; }
+
+.pageshover {
+  position: absolute;
+  display: none;
+  left: 390px;
+  top: 80px;
+  flex-direction: column;
+  z-index: 2;
+  justify-content: space-around;
+  background-color: white;
+  width: 200px; }
+  .pageshover div {
+    display: flex;
+    flex-direction: column; }
+    .pageshover div a {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: black; }
+
+.pages::after {
+  content: " ";
+  width: 0%;
+  height: 2px;
+  background-color: red; }
+
+.pages:hover::after {
+  width: 100%;
+  transition: 0.6s; }
+
+.pages a::after {
+  content: " ⯆";
+  font-size: 14px;
+  color: orangered; }
+
+.pages a:hover::after {
+  content: " ⯅";
+  color: green;
+  transition: 0.2s; }
+
+.pageshover div::after {
+  content: " ";
+  width: 0%;
+  height: 2px;
+  background-color: gray; }
+
+.pageshover div:hover::after {
+  width: 100%;
+  transition: 0.6s; }
+
+.dropdown4:hover .pages a {
+  color: black !important;
+  text-decoration: underline; }
+.dropdown4:hover .pageshover {
+  display: flex; }
+
+.pageshover div {
+  padding: 5px; }
+
+.pages:hover a {
+  color: black !important; }
+
+@media screen and (max-width: 426px) {
+  .hero .nav-main .nav .bar {
+    display: flex; }
+  .hero .nav-main .nav .nav-left {
+    display: none; } }
+.gifts {
+  margin-top: 100px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 100px; }
+  .gifts .gifts-1 .gifts-1-2 {
+    font-size: 44px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 600;
+    margin-top: 30px; }
+@keyframes scroll {
+  0% {
+    left: 100%; }
+  100% {
+    left: -100%; } }
+  .gifts .gifts-2 {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 100px;
+    margin-bottom: 50px; }
+    .gifts .gifts-2 .gifts-2-1 .myproducts-2-1-1 {
+      width: 350px;
+      height: 350px;
+      overflow: hidden; }
+      .gifts .gifts-2 .gifts-2-1 .myproducts-2-1-1 .image-hover {
+        overflow: hidden;
+        background-image: url("https://skins.minimog.co/cdn/shop/products/5_b7ae2b8d-cef6-42c1-9cd5-4e08336c8397.jpg?v=1659521376&width=350");
+        z-index: -1;
+        width: 350px;
+        height: 350px; }
+      .gifts .gifts-2 .gifts-2-1 .myproducts-2-1-1 .myproducts-2-1-1-1 {
+        display: flex;
+        flex-direction: column;
+        width: 20px;
+        position: sticky;
+        margin-left: 450px;
+        top: -1000px; }
+        .gifts .gifts-2 .gifts-2-1 .myproducts-2-1-1 .myproducts-2-1-1-1 i {
+          font-size: 12px;
+          margin: 5px;
+          width: 15px;
+          height: 15px;
+          padding: 10px;
+          border: 1px solid white;
+          border-radius: 50%;
+          color: black;
+          background-color: white;
+          align-content: center; }
+        .gifts .gifts-2 .gifts-2-1 .myproducts-2-1-1 .myproducts-2-1-1-1 i:hover {
+          border: 1px solid brown;
+          border-radius: 50%;
+          color: white;
+          background-color: brown; }
+      .gifts .gifts-2 .gifts-2-1 .myproducts-2-1-1 .myproducts-2-1-1-2 {
+        font-size: 16px;
+        color: black;
+        position: relative;
+        right: -40px;
+        display: none;
+        top: -220px;
+        padding-left: 100px;
+        padding-right: 100px;
+        background-color: white;
+        border: 1px solid white; }
+      .gifts .gifts-2 .gifts-2-1 .myproducts-2-1-1 .myproducts-2-1-1-2:hover {
+        background-color: brown !important;
+        color: white !important;
+        border-color: brown !important;
+        transition: 0s !important; }
+    .gifts .gifts-2 .gifts-2-1 .myproducts-2-1-1:hover .image-hover {
+      background-image: url("https://skins.minimog.co/cdn/shop/products/5a_3bd8de0e-45b8-4715-a8d0-8dcf93a7f5ba.jpg?v=1659521377&width=350");
+      scale: 1.1;
+      overflow: hidden;
+      transition: 0.6s; }
+    .gifts .gifts-2 .gifts-2-1 .myproducts-2-1-1:hover .myproducts-2-1-1-1 {
+      bottom: 100px;
+      margin-left: 300px;
+      transition: 0.6s;
+      z-index: 5; }
+    .gifts .gifts-2 .gifts-2-1 .myproducts-2-1-1:hover .myproducts-2-1-1-2 {
+      font-size: 16px;
+      padding: 20px;
+      color: black;
+      position: relative;
+      right: 0px;
+      display: inline-block;
+      bottom: -130px;
+      padding-left: 100px;
+      padding-right: 100px;
+      background-color: white;
+      border: 1px solid white;
+      transition: 1s !important; }
+    .gifts .gifts-2 .gifts-2-1 .myproducts-2-1-2 .myproducts-2-1-2-1 {
+      width: 350px;
+      font-size: 18px;
+      font-weight: 600;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .gifts .gifts-2 .gifts-2-1 .myproducts-2-1-2 .myproducts-2-1-2-2 {
+      color: red;
+      width: 350px;
+      font-size: 18px;
+      font-weight: 600;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .gifts .gifts-2 .gifts-2-1 .myproducts-2-1-2 .myproducts-2-1-2-2 del {
+        color: black;
+        margin-left: 10px; }
+    .gifts .gifts-2 .gifts-2-2 .myproducts-2-1-1 {
+      width: 350px;
+      height: 350px;
+      overflow: hidden; }
+      .gifts .gifts-2 .gifts-2-2 .myproducts-2-1-1 .image-hover {
+        overflow: hidden;
+        background-image: url("https://skins.minimog.co/cdn/shop/products/4_0546b8bb-1c58-43ec-9c45-7892f3cafc1a.jpg?v=1659521331&width=350");
+        z-index: -1;
+        width: 350px;
+        height: 350px; }
+      .gifts .gifts-2 .gifts-2-2 .myproducts-2-1-1 .myproducts-2-1-1-1 {
+        display: flex;
+        flex-direction: column;
+        width: 20px;
+        position: sticky;
+        margin-left: 450px;
+        top: -1000px; }
+        .gifts .gifts-2 .gifts-2-2 .myproducts-2-1-1 .myproducts-2-1-1-1 i {
+          font-size: 12px;
+          margin: 5px;
+          width: 15px;
+          height: 15px;
+          padding: 10px;
+          border: 1px solid white;
+          border-radius: 50%;
+          color: black;
+          background-color: white;
+          align-content: center; }
+        .gifts .gifts-2 .gifts-2-2 .myproducts-2-1-1 .myproducts-2-1-1-1 i:hover {
+          border: 1px solid brown;
+          border-radius: 50%;
+          color: white;
+          background-color: brown; }
+      .gifts .gifts-2 .gifts-2-2 .myproducts-2-1-1 .myproducts-2-1-1-2 {
+        font-size: 16px;
+        color: black;
+        position: relative;
+        right: -40px;
+        display: none;
+        top: -220px;
+        padding-left: 100px;
+        padding-right: 100px;
+        background-color: white;
+        border: 1px solid white; }
+      .gifts .gifts-2 .gifts-2-2 .myproducts-2-1-1 .myproducts-2-1-1-2:hover {
+        background-color: brown !important;
+        color: white !important;
+        border-color: brown !important;
+        transition: 0s !important; }
+    .gifts .gifts-2 .gifts-2-2 .myproducts-2-1-1:hover .image-hover {
+      background-image: url("https://skins.minimog.co/cdn/shop/products/4a_97e75852-c291-4732-88ce-fd5d2e13f574.jpg?v=1659521331&width=350");
+      scale: 1.1;
+      overflow: hidden;
+      transition: 0.6s; }
+    .gifts .gifts-2 .gifts-2-2 .myproducts-2-1-1:hover .myproducts-2-1-1-1 {
+      bottom: 100px;
+      margin-left: 300px;
+      transition: 0.6s;
+      z-index: 5; }
+    .gifts .gifts-2 .gifts-2-2 .myproducts-2-1-1:hover .myproducts-2-1-1-2 {
+      font-size: 16px;
+      padding: 20px;
+      color: black;
+      position: relative;
+      right: 0px;
+      display: inline-block;
+      bottom: -130px;
+      padding-left: 100px;
+      padding-right: 100px;
+      background-color: white;
+      border: 1px solid white;
+      transition: 1s !important; }
+    .gifts .gifts-2 .gifts-2-2 .myproducts-2-1-2 .myproducts-2-1-2-1 {
+      width: 350px;
+      font-size: 18px;
+      font-weight: 600;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .gifts .gifts-2 .gifts-2-2 .myproducts-2-1-2 .myproducts-2-1-2-2 {
+      color: red;
+      width: 350px;
+      font-size: 18px;
+      font-weight: 600;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .gifts .gifts-2 .gifts-2-2 .myproducts-2-1-2 .myproducts-2-1-2-2 del {
+        color: black;
+        margin-left: 10px; }
+    .gifts .gifts-2 .gifts-2-3 .myproducts-2-1-1 {
+      width: 350px;
+      height: 350px;
+      overflow: hidden; }
+      .gifts .gifts-2 .gifts-2-3 .myproducts-2-1-1 .image-hover {
+        overflow: hidden;
+        background-image: url("https://skins.minimog.co/cdn/shop/products/8_bb65e3ab-2272-4df6-aa19-eca480a5f43f.jpg?v=1659521268&width=350");
+        z-index: -1;
+        width: 350px;
+        height: 350px; }
+      .gifts .gifts-2 .gifts-2-3 .myproducts-2-1-1 .myproducts-2-1-1-1 {
+        display: flex;
+        flex-direction: column;
+        width: 20px;
+        position: sticky;
+        margin-left: 450px;
+        top: -1000px; }
+        .gifts .gifts-2 .gifts-2-3 .myproducts-2-1-1 .myproducts-2-1-1-1 i {
+          font-size: 12px;
+          margin: 5px;
+          width: 15px;
+          height: 15px;
+          padding: 10px;
+          border: 1px solid white;
+          border-radius: 50%;
+          color: black;
+          background-color: white;
+          align-content: center; }
+        .gifts .gifts-2 .gifts-2-3 .myproducts-2-1-1 .myproducts-2-1-1-1 i:hover {
+          border: 1px solid brown;
+          border-radius: 50%;
+          color: white;
+          background-color: brown; }
+      .gifts .gifts-2 .gifts-2-3 .myproducts-2-1-1 .myproducts-2-1-1-2 {
+        font-size: 16px;
+        color: black;
+        position: relative;
+        right: -40px;
+        display: none;
+        top: -220px;
+        padding-left: 100px;
+        padding-right: 100px;
+        background-color: white;
+        border: 1px solid white; }
+      .gifts .gifts-2 .gifts-2-3 .myproducts-2-1-1 .myproducts-2-1-1-2:hover {
+        background-color: brown !important;
+        color: white !important;
+        border-color: brown !important;
+        transition: 0s !important; }
+    .gifts .gifts-2 .gifts-2-3 .myproducts-2-1-1:hover .image-hover {
+      background-image: url("https://skins.minimog.co/cdn/shop/products/8_bb65e3ab-2272-4df6-aa19-eca480a5f43f.jpg?v=1659521268&width=350");
+      scale: 1.1;
+      overflow: hidden;
+      transition: 0.6s; }
+    .gifts .gifts-2 .gifts-2-3 .myproducts-2-1-1:hover .myproducts-2-1-1-1 {
+      bottom: 100px;
+      margin-left: 300px;
+      transition: 0.6s;
+      z-index: 5; }
+    .gifts .gifts-2 .gifts-2-3 .myproducts-2-1-1:hover .myproducts-2-1-1-2 {
+      font-size: 16px;
+      padding: 20px;
+      color: black;
+      position: relative;
+      right: 0px;
+      display: inline-block;
+      bottom: -130px;
+      padding-left: 100px;
+      padding-right: 100px;
+      background-color: white;
+      border: 1px solid white;
+      transition: 1s !important; }
+    .gifts .gifts-2 .gifts-2-3 .myproducts-2-1-2 .myproducts-2-1-2-1 {
+      width: 350px;
+      font-size: 18px;
+      font-weight: 600;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .gifts .gifts-2 .gifts-2-3 .myproducts-2-1-2 .myproducts-2-1-2-2 {
+      color: red;
+      width: 350px;
+      font-size: 18px;
+      font-weight: 600;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .gifts .gifts-2 .gifts-2-3 .myproducts-2-1-2 .myproducts-2-1-2-2 del {
+        color: black;
+        margin-left: 10px; }
+    .gifts .gifts-2 .gifts-2-4 .myproducts-2-1-1 {
+      width: 350px;
+      height: 350px;
+      overflow: hidden; }
+      .gifts .gifts-2 .gifts-2-4 .myproducts-2-1-1 .image-hover {
+        overflow: hidden;
+        background-image: url("https://skins.minimog.co/cdn/shop/products/7_d87333d2-c974-48f9-a9b4-58b1a63098af.jpg?v=1659521472&width=350");
+        z-index: -1;
+        width: 350px;
+        height: 350px; }
+      .gifts .gifts-2 .gifts-2-4 .myproducts-2-1-1 .myproducts-2-1-1-1 {
+        display: flex;
+        flex-direction: column;
+        width: 20px;
+        position: sticky;
+        margin-left: 450px;
+        top: -1000px; }
+        .gifts .gifts-2 .gifts-2-4 .myproducts-2-1-1 .myproducts-2-1-1-1 i {
+          font-size: 12px;
+          margin: 5px;
+          width: 15px;
+          height: 15px;
+          padding: 10px;
+          border: 1px solid white;
+          border-radius: 50%;
+          color: black;
+          background-color: white;
+          align-content: center; }
+        .gifts .gifts-2 .gifts-2-4 .myproducts-2-1-1 .myproducts-2-1-1-1 i:hover {
+          border: 1px solid brown;
+          border-radius: 50%;
+          color: white;
+          background-color: brown; }
+      .gifts .gifts-2 .gifts-2-4 .myproducts-2-1-1 .myproducts-2-1-1-2 {
+        font-size: 16px;
+        color: black;
+        position: relative;
+        right: -40px;
+        display: none;
+        top: -220px;
+        padding-left: 100px;
+        padding-right: 100px;
+        background-color: white;
+        border: 1px solid white; }
+      .gifts .gifts-2 .gifts-2-4 .myproducts-2-1-1 .myproducts-2-1-1-2:hover {
+        background-color: brown !important;
+        color: white !important;
+        border-color: brown !important;
+        transition: 0s !important; }
+    .gifts .gifts-2 .gifts-2-4 .myproducts-2-1-1:hover .image-hover {
+      background-image: url("https://skins.minimog.co/cdn/shop/products/7a_de92a828-43f6-4914-b050-f88e61d6cac1.jpg?v=1659521476&width=350");
+      scale: 1.1;
+      overflow: hidden;
+      transition: 0.6s; }
+    .gifts .gifts-2 .gifts-2-4 .myproducts-2-1-1:hover .myproducts-2-1-1-1 {
+      bottom: 100px;
+      margin-left: 300px;
+      transition: 0.6s;
+      z-index: 5; }
+    .gifts .gifts-2 .gifts-2-4 .myproducts-2-1-1:hover .myproducts-2-1-1-2 {
+      font-size: 16px;
+      padding: 20px;
+      color: black;
+      position: relative;
+      right: 0px;
+      display: inline-block;
+      bottom: -130px;
+      padding-left: 100px;
+      padding-right: 100px;
+      background-color: white;
+      border: 1px solid white;
+      transition: 1s !important; }
+    .gifts .gifts-2 .gifts-2-4 .myproducts-2-1-2 .myproducts-2-1-2-1 {
+      width: 350px;
+      font-size: 18px;
+      font-weight: 600;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .gifts .gifts-2 .gifts-2-4 .myproducts-2-1-2 .myproducts-2-1-2-2 {
+      color: red;
+      width: 350px;
+      font-size: 18px;
+      font-weight: 600;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .gifts .gifts-2 .gifts-2-4 .myproducts-2-1-2 .myproducts-2-1-2-2 del {
+        color: black;
+        margin-left: 10px; }
+    .gifts .gifts-2 .gifts-2-5 .myproducts-2-1-1 {
+      width: 350px;
+      height: 350px;
+      overflow: hidden; }
+      .gifts .gifts-2 .gifts-2-5 .myproducts-2-1-1 .image-hover {
+        overflow: hidden;
+        background-image: url("https://skins.minimog.co/cdn/shop/products/6_e6a59e04-cd8e-4bf5-86f6-3ca99ea736e2.jpg?v=1659521425&width=350");
+        z-index: -1;
+        width: 350px;
+        height: 350px; }
+      .gifts .gifts-2 .gifts-2-5 .myproducts-2-1-1 .myproducts-2-1-1-1 {
+        display: flex;
+        flex-direction: column;
+        width: 20px;
+        position: sticky;
+        margin-left: 450px;
+        top: -1000px; }
+        .gifts .gifts-2 .gifts-2-5 .myproducts-2-1-1 .myproducts-2-1-1-1 i {
+          font-size: 12px;
+          margin: 5px;
+          width: 15px;
+          height: 15px;
+          padding: 10px;
+          border: 1px solid white;
+          border-radius: 50%;
+          color: black;
+          background-color: white;
+          align-content: center; }
+        .gifts .gifts-2 .gifts-2-5 .myproducts-2-1-1 .myproducts-2-1-1-1 i:hover {
+          border: 1px solid brown;
+          border-radius: 50%;
+          color: white;
+          background-color: brown; }
+      .gifts .gifts-2 .gifts-2-5 .myproducts-2-1-1 .myproducts-2-1-1-2 {
+        font-size: 16px;
+        color: black;
+        position: relative;
+        right: -40px;
+        display: none;
+        top: -220px;
+        padding-left: 100px;
+        padding-right: 100px;
+        background-color: white;
+        border: 1px solid white; }
+      .gifts .gifts-2 .gifts-2-5 .myproducts-2-1-1 .myproducts-2-1-1-2:hover {
+        background-color: brown !important;
+        color: white !important;
+        border-color: brown !important;
+        transition: 0s !important; }
+    .gifts .gifts-2 .gifts-2-5 .myproducts-2-1-1:hover .image-hover {
+      background-image: url("https://skins.minimog.co/cdn/shop/products/6a_9f91395e-0023-4c83-b105-73356b72c445.jpg?v=1659521425&width=350");
+      scale: 1.1;
+      overflow: hidden;
+      transition: 0.6s; }
+    .gifts .gifts-2 .gifts-2-5 .myproducts-2-1-1:hover .myproducts-2-1-1-1 {
+      bottom: 100px;
+      margin-left: 300px;
+      transition: 0.6s;
+      z-index: 5; }
+    .gifts .gifts-2 .gifts-2-5 .myproducts-2-1-1:hover .myproducts-2-1-1-2 {
+      font-size: 16px;
+      padding: 20px;
+      color: black;
+      position: relative;
+      right: 0px;
+      display: inline-block;
+      bottom: -130px;
+      padding-left: 100px;
+      padding-right: 100px;
+      background-color: white;
+      border: 1px solid white;
+      transition: 1s !important; }
+    .gifts .gifts-2 .gifts-2-5 .myproducts-2-1-2 .myproducts-2-1-2-1 {
+      width: 350px;
+      font-size: 18px;
+      font-weight: 600;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .gifts .gifts-2 .gifts-2-5 .myproducts-2-1-2 .myproducts-2-1-2-2 {
+      color: red;
+      width: 350px;
+      font-size: 18px;
+      font-weight: 600;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .gifts .gifts-2 .gifts-2-5 .myproducts-2-1-2 .myproducts-2-1-2-2 del {
+        color: black;
+        margin-left: 10px; }
+  .gifts .gifts-3 {
+    font-size: 16px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    border: 1px solid black;
+    display: flex;
+    justify-self: center !important;
+    align-self: center !important; }
+    .gifts .gifts-3 a {
+      text-decoration: none;
+      color: black;
+      padding: 10px;
+      padding-left: 20px;
+      padding-right: 20px; }
+  .gifts .gifts-3:hover {
+    background-color: brown;
+    transition: 0.6s; }
+    .gifts .gifts-3:hover a {
+      color: white;
+      transition: 0.6s; }
+  .gifts .gifts-2::-webkit-scrollbar {
+    display: none; }
+
+@media screen and (max-width: 769px) {
+  .gifts {
+    height: auto; }
+    .gifts .gifts-2 {
+      margin-left: 20px;
+      margin-right: 20px; }
+      .gifts .gifts-2 div div .myproducts-2-1-1-2:hover {
+        bottom: 300px; } }
+.footer {
+  overflow-x: hidden;
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: #360505; }
+  .footer .f-1 {
+    width: 430px; }
+    .footer .f-1 .f-1-1 a {
+      font-size: 40px;
+      font-weight: 600;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      color: white;
+      padding-bottom: 10px;
+      text-decoration: none; }
+    .footer .f-1 .f-1-2 {
+      font-size: 18px;
+      font-weight: 600px;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      color: #c9c9c9;
+      padding-bottom: 20px; }
+    .footer .f-1 .f-1-3 {
+      background-color: #504d48;
+      border: 1px solid #504d48; }
+      .footer .f-1 .f-1-3 input[type="email"] {
+        background-color: #504d48;
+        margin-left: 55px;
+        width: 200px;
+        padding: 10px;
+        align-items: center;
+        -webkit-transition: width 0.35s ease-in-out;
+        transition: width 0.35s ease-in-out;
+        color: white;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+        font-size: 18px;
+        border: none; }
+      .footer .f-1 .f-1-3 input[type="email"]:focus {
+        width: 320px;
+        outline: none; }
+      .footer .f-1 .f-1-3 ::placeholder {
+        background-color: #504d48;
+        color: white;
+        font-size: 18px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+        padding-left: 50px; }
+      .footer .f-1 .f-1-3 .icon1 {
+        background-color: #504d48;
+        position: absolute;
+        margin-top: 5px;
+        margin-left: 20px;
+        font-size: 20px;
+        color: red;
+        padding: 9px; }
+      .footer .f-1 .f-1-3 .icon2 {
+        background-color: #504d48;
+        position: absolute;
+        margin-top: 0px;
+        margin-left: 380px;
+        font-size: 20px;
+        color: red;
+        padding: 13px;
+        text-decoration: none; }
+      .footer .f-1 .f-1-3 .icon2:hover {
+        background-color: white;
+        padding: 13px; }
+  .footer .f-2 .f-2-1 {
+    margin-bottom: 20px; }
+    .footer .f-2 .f-2-1 a {
+      color: white;
+      font-size: 18px;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      text-decoration: none; }
+  .footer .f-2 .f-2-2 {
+    margin-bottom: 10px; }
+    .footer .f-2 .f-2-2 a {
+      color: #c9c9c9;
+      font-size: 18px;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column; }
+  .footer .f-2 .f-2-2 a::after {
+    content: " ";
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    color: white; }
+  .footer .f-2 .f-2-2 a:hover::after {
+    width: 50%;
+    transition: 0.6s; }
+  .footer .f-3 .f-3-1 {
+    margin-bottom: 20px; }
+    .footer .f-3 .f-3-1 a {
+      color: white;
+      font-size: 18px;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      text-decoration: none; }
+  .footer .f-3 .f-3-2 {
+    color: #c9c9c9;
+    font-size: 18px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    margin-bottom: 10px; }
+  .footer .f-4 .f-4-1 {
+    margin-bottom: 20px; }
+    .footer .f-4 .f-4-1 a {
+      color: white;
+      font-size: 18px;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      text-decoration: none; }
+  .footer .f-4 .f-4-2 a {
+    text-decoration: none; }
+    .footer .f-4 .f-4-2 a i {
+      color: #c9c9c9;
+      font-size: 18px;
+      padding: 5px;
+      margin-bottom: 10px;
+      color: #c9c9c9; }
+
+@media screen and (max-width: 1025px) {
+  .footer {
+    padding-left: 20px;
+    display: grid;
+    grid-template-columns: auto auto; } }
+@media screen and (max-width: 769px) {
+  .footer {
+    padding-left: 20px;
+    display: grid;
+    grid-template-columns: auto auto; } }
+@media screen and (max-width: 426px) {
+  .footer {
+    padding-left: 20px;
+    display: grid;
+    grid-template-columns: auto; }
+    .footer .f-1 {
+      width: 400px; }
+      .footer .f-1 .f-1-3 .icon2 {
+        margin-left: 350px; } }
+@media screen and (max-width: 376px) {
+  .footer {
+    padding-left: 20px;
+    display: grid;
+    grid-template-columns: auto; }
+    .footer .f-1 {
+      width: 375px; }
+      .footer .f-1 .f-1-3 .icon2 {
+        margin-left: 320px; } }
+@media screen and (max-width: 321px) {
+  .footer {
+    padding-left: 20px;
+    display: grid;
+    grid-template-columns: auto; }
+    .footer .f-1 {
+      width: 320px; }
+      .footer .f-1 .f-1-3 .icon2 {
+        margin-left: 260px; } }
+
+/*# sourceMappingURL=products.css.map */

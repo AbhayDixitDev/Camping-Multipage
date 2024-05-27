@@ -1,0 +1,3033 @@
+$bgcolor: black;
+$fontcolor: white;
+$width1: 100vw;
+
+* {
+  padding: 0px;
+  margin: 0px;
+ 
+  
+
+}
+*::-webkit-scrollbar{
+    display: none;
+}
+.myproducts::-webkit-scrollbar{
+  display: none;
+}
+
+
+@mixin displayelement {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  
+  overflow-x: hidden;
+}
+
+#label1 {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 20px;
+  color: white;
+  overflow-x: hidden;
+}
+
+#nav1 {
+  overflow-x: hidden;
+
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(54, 51, 51);
+  color: $fontcolor;
+}
+
+#input1:checked ~ #nav1 {
+  display: none;
+}
+
+#input1:checked ~ #label1 {
+  display: none;
+}
+
+#cart{
+  overflow-x: hidden;
+
+  background-color: white;
+  z-index: 2;
+  border: 1px solid black;
+  justify-self: flex-end;
+  width: 30vw;
+  height: 100vh;
+  display:none;
+  right: 0px;
+  top: 0px;
+  position: absolute;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 50px;
+ & .cart1{
+     & .cart1-1{
+          font-size: 24px;
+          font-weight: 600;
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+     & .cart1-2{
+          font-size: 20px;
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+  }
+ &  .cart2{
+       & a{
+          text-decoration: none;
+         &  i{
+              font-size: 32px;
+          font-weight: 600;
+          }
+        }
+  }
+}
+
+
+#cart:target{
+ display: flex;
+}
+
+#sidemenu:target{
+  display: flex;
+}
+
+#sidemenu{
+  overflow-x: hidden;
+
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 20px;
+  width: 90vw;
+  height: 94vh;
+  
+  .sidemenu-1{
+      .sidemenu-0{
+          display: flex;
+          justify-content: start;
+          align-items: start;
+          font-size: 24px;
+      }
+      div{
+          width: 300px;
+          padding-bottom: 10px;
+          a{
+              text-decoration: none;
+              font-size: 24px;
+              font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+              font-weight: 600;
+
+
+          }
+          
+
+      }
+      .sidemenu-1-1::after
+          {
+              float: right;
+              content: "⯆";
+              font-size: 14px;
+              color: orangered;
+          }
+          .sidemenu-1-1:hover::after {
+              content: " ⯅";
+              color: green;
+              transition: 0.2s;
+            }
+  }
+  .sidemenu-2{
+  overflow-x: hidden;
+
+      display: flex;
+      flex-direction:column ;
+      .sidemenu-2-1{
+          font-size: 24px;
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          font-weight: 600;
+      margin-bottom: 20px;
+
+
+
+      }
+      .sidemenu-2-2{
+          width: 250px;
+          background-color: red;
+          border: 1px solid red;
+      margin-bottom: 20px;
+
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          a{
+              font-size: 20px;
+              padding: 5px;
+              font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+              font-weight: 600;
+              color: white;
+              text-decoration: none;
+          }
+      }
+      .sidemenu-2-3{
+          width: 250px;
+          background-color: white;
+          border: 1px solid black;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          a{
+              font-size: 20px;
+              padding: 5px;
+              font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+              font-weight: 600;
+              color:black;
+              text-decoration: none;
+          }
+      }
+
+  }
+}
+
+// navbar
+.hero {
+  overflow-x: hidden;
+
+  background-image: url("https://skins.minimog.co/cdn/shop/files/camping_hero.jpg?v=1659941685&width=1550");
+  height: 100vh;
+  & .nav-main {
+    & .nav {
+      display: flex;
+      list-style-type: none;
+      justify-content: space-around;
+      align-items: center;
+      & .bar{
+        display: none;
+        & a{
+            & i{
+                color: white;
+                font-size: 20px;
+            }
+        }
+
+      }
+      & .nav-left {
+        & ul {
+          display: flex;
+          list-style-type: none;
+          justify-content: space-evenly;
+          align-items: center;
+          & li {
+            padding: 10px;
+            & a {
+              text-decoration: none;
+              color: white;
+              font-size: 20px;
+            }
+          }
+        }
+      }
+
+      & .nav-middle {
+        align-items: center;
+        img {
+          width: 100px;
+        }
+      }
+      & .nav-right {
+        & ul {
+          display: flex;
+          align-items: center;
+          & li {
+            padding: 10px;
+          }
+        }
+      }
+
+      & .nav-right {
+        & ul {
+          & li {
+            & i {
+              color: white;
+            }
+
+          }
+          & li:hover{
+            & i{
+              color: red;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  & .hero-main {
+    & .hero-main-1 {
+      margin-top: 150px;
+      & .camping {
+        font-size: 120px;
+        color: white;
+      }
+      & .homecamp {
+        & p {
+          font-size: 24px;
+          color: white;
+        }
+      }
+
+      & .shopnow-btn {
+        border: 1px solid red;
+        margin-top: 40px;
+        width: 200px;
+        background-color: red;
+        margin: 10px;
+        padding: 10px;
+        & .btn {
+          font-size: 20px;
+          color: white;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:769px) {
+  .hero{
+    height: auto;
+    background-image: url("https://skins.minimog.co/cdn/shop/files/camping_hero.jpg?v=1659941685&width=768");
+    .hero-main{
+      .hero-main-1{
+        margin-top: 50px;
+      }
+    }
+  }
+  
+}
+@media screen and (max-width:426px) {
+  .hero{
+    height: auto;
+    background-image: url("https://skins.minimog.co/cdn/shop/files/camping_hero.jpg?v=1659941685&width=426");
+    .hero-main{
+      .hero-main-1{
+        margin-top: 40px;
+        .camping{
+          font-size: 50px;
+        }
+        .homecamp{
+          p{
+            font-size: 14px;
+          }
+
+        }
+        .shopnow-btn{
+          width: 80px;
+          margin: 2px;
+          padding: 2px;
+          .btn{
+            font-size: 14px;
+            width: 60px;
+          }
+        }
+      }
+    }
+  }
+  
+}
+
+.color {
+  display: none;
+}
+.new:hover + .color {
+  display: flex;
+  background-color: red;
+}
+
+
+// experiment
+
+
+
+.home{
+  overflow-x: hidden;
+
+  // background-color: #4CAF50;
+  display:flex;
+  flex-direction: column;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  padding-left: 200px;
+  padding-right: 200px;
+  & a{
+    color: white;
+  }
+}
+
+
+
+
+
+.dropdown1:hover{
+  overflow-x: hidden;
+
+  
+
+  & .home{
+    color: white;
+
+     
+    & a{
+        color: white;
+    text-decoration: underline;
+
+    }
+    }
+//   &  .home1 {
+//   display: grid;
+// }
+& .home1{
+  display: grid;
+}
+}
+
+
+
+
+
+
+.home1 {
+  overflow-x: hidden;
+
+  width: 100vw;
+  position: absolute;
+  display: none;
+  left: 0;
+  top: 80px;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  z-index: 2;
+  height: 90vh;
+  background-color: white;
+  // display: none;
+  // position: absolute;
+  // background-color: #f9f9f9;
+  // min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1; 
+  overflow-x: hidden !important;
+}
+
+
+// .home1{
+//   position: absolute;
+//   width: 60vw;
+//   height: 60vh;
+//   top:80px;
+//   left: 0;
+//   display: none;
+//   flex-direction: column;
+//   background-color: white;
+//   z-index: 1;
+//   & .home1-1 {
+//     padding: 20px;
+//     display: flex;
+//     flex-direction: row;
+//     align-items: center;
+//     width: 600px;
+//     & .home1-1-1 {
+//       width: 20px;
+//     }
+//     & .home1-1-2 {
+//       padding-left: 10px;
+//       padding-right: 10px;
+
+//       & img {
+//         width: 100px;
+//       }
+//     }
+//     & .home1-1-3 {
+//       width: 400px;
+//       font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+//         sans-serif;
+//       font-size: 16px;
+//       font-weight: 600;
+//     }
+
+//     & .home1-1-4 {
+//       font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+//         sans-serif;
+//     }
+//   }
+
+// }
+
+.home1 div{
+  overflow-x: hidden;
+
+    display: flex;
+    flex-direction: column;
+  width: 80px;
+  margin-left: 60px;
+  // border: 1px solid black;
+  & a {
+    margin: 5px;
+    text-decoration: none;
+    color: black;
+    // padding: 8px 8px;
+    text-decoration: none;
+    display: block;
+  }
+}
+
+
+
+
+
+.home::after{
+  content: " ";
+  width: 0%;
+  height: 2px;
+  background-color: red;
+  color: white;
+}
+.home:hover::after{
+  width: 100%;
+  transition: 0.6s;
+}
+.home a::after{
+    content: " ⯆";
+    font-size: 14px;
+    color: orangered;
+  }
+  .home a:hover::after{
+    content: " ⯅";
+    color: green;
+    transition: 0.2s;
+  }
+
+.home1 div::after{
+    content: " ";
+    width: 0%;
+    height: 2px;
+    background-color: green;
+  }
+  .home1 div:hover::after{
+    width: 100%;
+    transition: 0.6s;
+  }
+
+
+// dropdown 2 start
+
+
+.shop{
+  // background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  // cursor: pointer;
+  flex-direction: column;
+  display: flex;
+  overflow-x: hidden;
+
+}
+.shop::after{
+  content: " ";
+  width: 0%;
+  height: 2px;
+  background-color: red;
+  color: white;
+}
+.shop:hover::after{
+  width: 100%;
+  transition: 0.6s;
+}
+
+.shop:hover {
+  & a {
+    color: white !important;
+  }
+}
+.shop a::after{
+    content: " ⯆";
+    font-size: 14px;
+    color: orangered;
+  }
+  .shop a:hover::after{
+    content: " ⯅";
+    color: green;
+    transition: 0.2s;
+  }
+
+
+
+
+
+.dropdown2:hover{
+  overflow-x: hidden;
+  
+  
+  & .shop{
+     
+    & a{
+    color: white !important;
+    text-decoration: underline;
+
+    }
+    }
+  &  .shop1 {
+  display: flex;
+}
+}
+
+
+
+
+.shop1 {
+  height: 55vh;
+  width: 100vw;
+  position: absolute;
+  display: none;
+  flex-direction: row;
+  justify-content: space-evenly;
+  left: 0;
+  top: 80px;
+  z-index: 2;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;  
+  overflow-x: hidden ;
+  & .shop1-1 {
+
+    display: grid;
+        grid-template-columns: auto auto auto auto;
+        & div{
+            display: flex;
+            flex-direction: column;
+          margin-left: 60px;
+          & a{
+            text-decoration: none;
+          }
+        }
+      }
+  & .shop1-2{
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    align-items: center;
+    & img{
+      width: 400px;
+    }
+    & div{
+      font-size: 24px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-weight: 600;
+    }
+    & .btn{
+      height: 40px;
+      background-color: brown;
+      & a{
+        padding: 20px;
+        text-decoration: none;
+        color: white;
+
+      }
+    }
+
+
+  }    
+
+}
+.shop1-1 div::after{
+    content: " ";
+    width: 0%;
+    height: 2px;
+    background-color: green;
+  }
+  .shop1-1 div:hover::after{
+    width: 100%;
+    transition: 0.6s;
+  }
+
+.shop1 shop1-1 div{
+  width: 80px;
+  padding: 80px;
+  // border: 1px solid black;
+  & a {
+    margin: 5px;
+    text-decoration: none;
+    color: red;
+    // padding: 8px 8px;
+    text-decoration: none;
+    display: block;
+  }
+}
+
+// pages start
+.pages{
+  overflow-x: hidden;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.pageshover {
+  overflow-x: hidden;
+
+  position: absolute;
+  display: none;
+  left: 390px;
+  top: 80px;
+  flex-direction: column;
+  z-index: 2;
+  justify-content: space-around;
+  background-color: white;
+  width: 200px;
+  & div {
+    display: flex;
+    flex-direction: column;
+   
+      & a{
+        display: flex;
+    flex-direction: column;
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+
+  .pages::after{
+    content: " ";
+    width: 0%;
+    height: 2px;
+    background-color: red;
+  }
+  .pages:hover::after{
+    width: 100%;
+    transition: 0.6s;
+  }
+  .pages a::after{
+    content: " ⯆";
+    font-size: 14px;
+    color: orangered;
+  }
+  .pages a:hover::after{
+    content: " ⯅";
+    color: green;
+    transition: 0.2s;
+  }
+
+  .pageshover div::after{
+    content: " ";
+    width: 0%;
+    height: 2px;
+    background-color: gray;
+  }
+  .pageshover div:hover::after{
+    width: 100%;
+    transition: 0.6s;
+  }
+  
+  
+
+.dropdown4:hover{
+
+  & .pages{
+    & a{
+      color: white!important;
+      text-decoration: underline;
+  
+      }
+
+  }
+  
+.pageshover {
+  display: flex;
+  
+}
+}
+
+.pageshover div {
+  padding: 5px;
+}
+.pages:hover {
+  // background-color: white;
+  & a {
+    color: white !important;
+  }
+}
+
+// dropdown 5 start
+
+@media screen and (max-width:426px){
+  .hero{
+   .nav-main{
+       .nav{
+           .bar{
+               display: flex;
+               
+           }
+           .nav-left{
+       
+               display: none;
+           }
+       }
+   }
+  }
+   
+}
+
+
+
+
+
+
+
+// hero end
+
+.container1 {
+  overflow-x: hidden;
+  display: flex;
+  overflow-x: hidden;
+  justify-content: space-around;
+  // width: ;
+  & div {
+    & img {
+      opacity: 0.5;
+    }
+  }
+}
+.container-img1:hover {
+  opacity: 1;
+}
+// .container-img2:hover {
+//   opacity: 1;
+// }
+// .container-img3:hover {
+//   opacity: 1;
+// }
+// .container-img4:hover {
+//   opacity: 1;
+// }
+// .container-img5:hover {
+//   opacity: 1;
+// }
+
+@media screen and (max-width:769px){
+  .container1{
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    div{
+      .container-img1{
+        width: 120px;
+      }
+      
+    }
+  }
+}
+@media screen and (max-width:426px){
+  .container1{
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div{
+      .container-img1{
+        
+        width: 80px  ;
+      }
+    
+    }
+  }
+}
+
+
+.sticky {
+  overflow-x: hidden;
+
+  display: block;
+  opacity: 0.5;
+  border: 1px solid orangered;
+  border-radius: 10px;
+  background-color: orangered;
+  position: fixed;
+  top: 200px;
+  right: 0px;
+  width: 20px;
+  height: 120px;
+  padding: 10px;
+  & i {
+    font-size: 20px;
+    color: white;
+    margin-top: 10px;
+  }
+}
+
+// ======= my products
+
+.myproducts {
+  overflow-x: hidden;
+
+  margin-top: 100px;
+
+  & .myproducts-1 {
+    & .myproducts-1-1 {
+      font-size: 20px;
+      color: black;
+      margin-bottom: 20px;
+    }
+
+    & .myproducts-1-2 {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    & .myproducts-1-3 {
+      font-size: 20px;
+      color: black;
+      width: 100vw;
+      margin-bottom: 20px;
+    }
+  }
+
+  & .myproducts-2 {
+    overflow-x: scroll;
+    margin-bottom: 20px;
+    margin-left: 20px;
+
+    display: flex;
+    & .myproducts-2-1 {
+      display: block;
+      padding: 20px;
+
+      & .myproducts-2-1-1 {
+        background-image: url("https://skins.minimog.co/cdn/shop/products/18c.jpg?v=1659520124&width=535");
+        width: 400px;
+        height: 400px;
+        overflow-x: hidden;
+        & .myproducts-2-1-1-1 {
+          display: flex;
+          flex-direction: column;
+          width: 20px;
+          position: sticky;
+          margin-left: 450px;
+          top: 20px;
+          & i {
+            margin: 5px;
+            width: 20px;
+            height: 20px;
+            padding: 10px;
+            border: 1px solid white;
+            border-radius: 50%;
+            color: black;
+            background-color: white;
+            align-content: center;
+          }
+          & i:hover {
+            border: 1px solid black;
+            border-radius: 50%;
+            color: white;
+            background-color: orangered;
+          }
+        }
+        & .myproducts-2-1-1-2 {
+          font-size: 30px;
+          color: black;
+          position: relative;
+          right: -30px;
+          display: none;
+          bottom: -180px;
+          padding-left: 100px;
+          padding-right: 100px;
+          background-color: white;
+          border: 1px solid white;
+        }
+        & .myproducts-2-1-1-2:hover {
+          background-color: orangered !important;
+          color: white !important;
+          border-color: orangered !important;
+          transition: 0s !important;
+        }
+      }
+      & .myproducts-2-1-1:hover {
+        background-image: url("https://skins.minimog.co/cdn/shop/products/17a.jpg?v=1659520008&width=535");
+        scale: 1.01;
+        overflow: hidden;
+        transition: 2s;
+      }
+      & .myproducts-2-1-1:hover {
+        & .myproducts-2-1-1-1 {
+          margin-left: 350px;
+          transition: 0.6s;
+        }
+        & .myproducts-2-1-1-2 {
+          font-size: 30px;
+          color: black;
+          position: relative;
+          right: -30px;
+          display: inline-block;
+          bottom: -180px;
+          padding-left: 100px;
+          padding-right: 100px;
+          background-color: white;
+          border: 1px solid white;
+          transition: 1s !important;
+        }
+      }
+      & .myproducts-2-1-2 {
+        & .myproducts-2-1-2-1 {
+          width: 400px;
+          font-size: 16px;
+          font-weight: 600;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        & .myproducts-2-1-2-2 {
+          width: 400px;
+          font-size: 16px;
+          font-weight: 600;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  & .myproducts-3 {
+    padding-left: 50px;
+    display: flex;
+    margin-left: 100px;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    & div {
+      border: 1px solid black;
+      padding: 10px;
+      justify-items: center;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      align-self: center;
+
+      & a {
+        font-size: 20px;
+        padding: 20px;
+        text-decoration: none;
+        color: black;
+      }
+    }
+    & div:hover {
+      background-color: orangered;
+      border-color: orangered;
+      & a {
+        color: white;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:1025px) {
+  .myproducts{
+    .myproducts-2{
+      .myproducts-2-1{
+        width: auto;
+      }
+      
+    }
+  }
+}
+@media screen and (max-width:769px) {
+  .myproducts{
+    .myproducts-2{
+      .myproducts-2-1{
+        width: auto;
+      }
+      
+    }
+  }
+}
+@media screen and (max-width:426px) {
+  .myproducts{
+    display:none;
+
+    .myproducts-2{
+        width: auto;
+      .myproducts-2-1{
+        width: 300px;
+        height: 400px;
+        margin-left: 0px;
+       .myproducts-2-1-1{
+        width: 300px;
+        height: 300px;
+       }
+        
+      }
+      
+    }
+  }
+}
+.myproducts-2::-webkit-scrollbar {
+  display: none;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+// ===== nature love section
+
+.naturelove {
+  overflow-x: hidden;
+
+  display: block;
+  margin-top: 200px;
+  margin-bottom: 200px;
+
+  & .naturelove-1 {
+    & .nl1-1 {
+      display: flex;
+      justify-content: center;
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+    & .nl1-2 {
+      font-size: 48px;
+      font-weight: 600;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-items: center;
+      margin-left: 300px;
+      margin-right: 300px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  }
+  & .naturelove-2 {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    justify-content: space-around;
+
+    & .nl2-1 {
+      & .nl2-1-1 {
+        width: 150px;
+        height: 120px;
+        overflow: hidden;
+        & i {
+          font-size: 100px;
+          background-color: white;
+        }
+        & i:hover {
+          scale: 1.03;
+          transition: scale 0.6s;
+        }
+      }
+      & .nl2-1-2 {
+        & .item {
+          font-size: 24px;
+        }
+        & .quantity {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:769px) {
+  .naturelove{
+    overflow-x: hidden;
+    .naturelove-1{
+      .nl1-2{        
+      margin-left: 20px;
+      margin-right: 20px;
+      }
+    }
+  }
+  
+}
+@media screen and (max-width:426px) {
+  .naturelove{
+    overflow-x: hidden;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    .naturelove-1{
+      .nl1-2{        
+      margin-left: 20px;
+      margin-right: 20px;
+      font-size: 24px;
+      }
+    }
+    .naturelove-2{
+      .nl2-1{
+        .nl2-1-1{
+          width: 80px;
+        height: 60px;
+        overflow: hidden;
+        i{
+          font-size: 40px;
+        }
+        }
+      }
+    }
+  }
+  
+}
+
+// bundle start
+
+.bundle {
+
+  margin-left: 100px;
+  margin-right: 100px;
+  display: flex;
+  justify-content: space-between;
+
+  & .bundle-img {
+    width: 600px;
+    height: 700px;
+    background-image: url("https://skins.minimog.co/cdn/shop/files/camping_lookbook_1.jpg?v=1659943731&width=600");
+
+    & .cir1 {
+      position: relative;
+      top: 350px;
+      left: -50px;
+      z-index: 0;
+      cursor: pointer;
+
+      & .wave-cir-con {
+        position: relative;
+        margin: 0 auto;
+        width: 20px;
+        height: 20px;
+        border-radius: 9999px;
+        background-color: white;
+        & .sonar-wave {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 9999px;
+          background-color: white;
+          opacity: 0;
+          z-index: -1;
+          pointer-events: none;
+          animation: sonarWave 2s linear infinite;
+          @keyframes sonarWave {
+            from {
+              opacity: 0.4;
+            }
+            to {
+              transform: scale(3);
+              opacity: 0;
+            }
+          }
+        }
+      }
+    }
+
+    // circle hover box start
+
+    .box-1 {
+      width: 165px;
+      height: 220px;
+      background-color: white;
+      border-radius: 10px;
+      align-items: center;
+      display: none;
+      flex-direction: column;
+      padding: 10px;
+      position: relative;
+      top: 340px;
+      left: 260px;
+
+      & .box-1-1 {
+        & div {
+          font-size: 14px;
+          font-weight: 600;
+        }
+      }
+    }
+    .cir1:hover + .box-1 {
+      display: flex;
+      transition-delay: 13s;
+      cursor: pointer;
+    }
+
+    & .cir2 {
+      position: relative;
+      top: 500px;
+      left: -180px;
+      z-index: 0;
+
+      & .wave-cir-con {
+        position: relative;
+        margin: 0 auto;
+        width: 20px;
+        height: 20px;
+        border-radius: 9999px;
+        background-color: white;
+        & .sonar-wave {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 9999px;
+          background-color: white;
+          opacity: 0;
+          z-index: -1;
+          pointer-events: none;
+          animation: sonarWave 2s linear infinite;
+          @keyframes sonarWave {
+            from {
+              opacity: 0.4;
+            }
+            to {
+              transform: scale(3);
+              opacity: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .box-2 {
+      width: 165px;
+      height: 220px;
+      background-color: white;
+      border-radius: 10px;
+      align-items: center;
+      display: none;
+      flex-direction: column;
+      padding: 10px;
+      position: relative;
+      top: 250px;
+      left: 120px;
+
+      & .box-2-1 {
+        & div {
+          font-size: 14px;
+          font-weight: 600;
+        }
+      }
+    }
+    .cir2:hover + .box-2 {
+      display: flex;
+    }
+
+    & .cir3 {
+      position: relative;
+      top: 515px;
+      left: 60px;
+      z-index: 0;
+
+      & .wave-cir-con {
+        position: relative;
+        margin: 0 auto;
+        width: 20px;
+        height: 20px;
+        border-radius: 9999px;
+        background-color: white;
+        & .sonar-wave {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 9999px;
+          background-color: white;
+          opacity: 0;
+          z-index: -1;
+          pointer-events: none;
+          animation: sonarWave 2s linear infinite;
+          @keyframes sonarWave {
+            from {
+              opacity: 0.4;
+            }
+            to {
+              transform: scale(3);
+              opacity: 0;
+            }
+          }
+        }
+      }
+    }
+
+    // circle hover box start
+
+    .box-3 {
+      width: 165px;
+      height: 220px;
+      background-color: white;
+      border-radius: 10px;
+      align-items: center;
+      display: none;
+      flex-direction: column;
+      padding: 10px;
+      position: relative;
+      top: 250px;
+      left: 170px;
+
+      & .box-3-1 {
+        & div {
+          font-size: 14px;
+          font-weight: 600;
+        }
+      }
+    }
+    .cir3:hover + .box-3 {
+      display: flex;
+    }
+  }
+
+  & .bundle-right {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    & .br-1 {
+      font-size: 20px;
+    }
+    & .br-2 {
+      font-size: 44px;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      font-weight: 600;
+    }
+    & .br-3 {
+      // border: 1px solid black;
+      padding: 20px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      & .br-3-1 {
+        // border: 1px solid black;
+        width: 20px;
+      }
+      & .br-3-2 {
+        // border: 1px solid black;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        & img {
+          // border: 1px solid black;
+          width: 100px;
+        }
+      }
+      & .br-3-3 {
+        // border: 1px solid black;
+        width: 400px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      & .br-3-4 {
+        // border: 1px solid black;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+    }
+    & .br-4 {
+      margin-top: 20px;
+      width: 550px;
+      background-color: #b64708;
+      text-align: center;
+      padding: 15px;
+
+      & a {
+        color: white;
+        text-decoration: none;
+        word-spacing: 5px;
+        font-weight: 600;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:1025px) {
+  .bundle{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+}
+@media screen and (max-width:426px) {
+  
+
+  .bundle {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 900px;
+    margin-left: 20px;
+    margin-right: 20px;
+    overflow-x: hidden;
+  
+    & .bundle-img {
+      width: 400px;
+      height: 450px;
+      background-image: url("https://skins.minimog.co/cdn/shop/files/camping_lookbook_1.jpg?v=1659943731&width=400");
+  
+      & .cir1 {
+        position: relative;
+        top: 250px;
+        left: -50px;
+        z-index: 0;
+        cursor: pointer;
+  
+        & .wave-cir-con {
+          position: relative;
+          margin: 0 auto;
+          width: 20px;
+          height: 20px;
+          border-radius: 9999px;
+          background-color: white;
+          & .sonar-wave {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 9999px;
+            background-color: white;
+            opacity: 0;
+            z-index: -1;
+            pointer-events: none;
+            animation: sonarWave 2s linear infinite;
+            @keyframes sonarWave {
+              from {
+                opacity: 0.4;
+              }
+              to {
+                transform: scale(3);
+                opacity: 0;
+              }
+            }
+          }
+        }
+      }
+  
+      // circle hover box start
+  
+      .box-1 {
+        // width: 65px;
+        background-color: white;
+        border-radius: 10px;
+        align-items: center;
+        display: none;
+        flex-direction: column;
+        padding: 10px;
+        position: relative;
+        top: 10px;
+        left: 160px;
+  
+        & .box-1-1 {
+          & div {
+            font-size: 14px;
+            font-weight: 600;
+          }
+        }
+      }
+      .cir1:hover + .box-1 {
+        display: flex;
+        transition-delay: 13s;
+        cursor: pointer;
+      }
+  
+      & .cir2 {
+        position: relative;
+        top: 300px;
+        left: 0px;
+        z-index: 0;
+  
+        & .wave-cir-con {
+          position: relative;
+          margin: 0 auto;
+          width: 20px;
+          height: 20px;
+          border-radius: 9999px;
+          background-color: white;
+          & .sonar-wave {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 9999px;
+            background-color: white;
+            opacity: 0;
+            z-index: -1;
+            pointer-events: none;
+            animation: sonarWave 2s linear infinite;
+            @keyframes sonarWave {
+              from {
+                opacity: 0.4;
+              }
+              to {
+                transform: scale(3);
+                opacity: 0;
+              }
+            }
+          }
+        }
+      }
+  
+      .box-2 {
+        // width: 65px;
+        // height: 110px;
+        background-color: white;
+        border-radius: 10px;
+        align-items: center;
+        display: none;
+        flex-direction: column;
+        padding: 10px;
+        position: relative;
+        top: 50px;
+        left: 60px;
+  
+        & .box-2-1 {
+          & div {
+            font-size: 14px;
+            font-weight: 600;
+          }
+        }
+      }
+      .cir2:hover + .box-2 {
+        display: flex;
+      }
+  
+      & .cir3 {
+        position: relative;
+        top: 320px;
+        left: 40px;
+        z-index: 0;
+  
+        & .wave-cir-con {
+          position: relative;
+          margin: 0 auto;
+          width: 20px;
+          height: 20px;
+          border-radius: 9999px;
+          background-color: white;
+          & .sonar-wave {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 9999px;
+            background-color: white;
+            opacity: 0;
+            z-index: -1;
+            pointer-events: none;
+            animation: sonarWave 2s linear infinite;
+            @keyframes sonarWave {
+              from {
+                opacity: 0.4;
+              }
+              to {
+                transform: scale(3);
+                opacity: 0;
+              }
+            }
+          }
+        }
+      }
+  
+      // circle hover box start
+  
+      .box-3 {
+        // width: 65px;
+        // height: 110px;
+        background-color: white;
+        border-radius: 10px;
+        align-items: center;
+        display: none;
+        flex-direction: column;
+        padding: 10px;
+        position: relative;
+        top: 10px;
+        left: 100px;
+  
+        & .box-3-1 {
+          & div {
+            font-size: 14px;
+            font-weight: 600;
+          }
+        }
+      }
+      .cir3:hover + .box-3 {
+        display: flex;
+      }
+    }
+  
+    & .bundle-right {
+      align-self: center;
+      display: flex;
+      flex-direction: column;
+      width: 400px;
+      & .br-1 {
+        font-size: 20px;
+      }
+      & .br-2 {
+        font-size: 24px;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        font-weight: 600;
+      }
+      & .br-3 {
+        // border: 1px solid black;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        & .br-3-1 {
+          // border: 1px solid black;
+          width: 20px;
+        }
+        & .br-3-2 {
+          // border: 1px solid black;
+          padding-left: 10px;
+          padding-right: 10px;
+  
+          & img {
+            // border: 1px solid black;
+            width: 100px;
+          }
+        }
+        & .br-3-3 {
+          // border: 1px solid black;
+          width: 160px;
+          font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+            sans-serif;
+          font-size: 16px;
+          font-weight: 600;
+        }
+  
+        & .br-3-4 {
+          // border: 1px solid black;
+          font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+            sans-serif;
+        }
+      }
+      & .br-4 {
+        margin-top: 20px;
+        width: 380px;
+        background-color: #b64708;
+        text-align: center;
+        padding: 15px;
+  
+        & a {
+          color: white;
+          text-decoration: none;
+          word-spacing: 5px;
+          font-weight: 600;
+          font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+            sans-serif;
+        }
+      }
+    }
+  }
+
+  
+}
+
+
+
+//=================== Bundle End ===================
+
+// =================outdoor start ======================
+.outdoor {
+  overflow: hidden;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+
+  overflow: none !important;
+  & div {
+    & .out-1 {
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      text-align: center;
+    }
+    & .out-2 {
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      font-size: 46px;
+      margin-bottom: 50px;
+      font-weight: 600;
+    }
+  }
+
+  & .outdoor-img {
+    background-image: url("https://skins.minimog.co/cdn/shop/files/camping_lookbook_2.jpg?v=1659944194&width=1350");
+    width: 1350px;
+    height: 90vh;
+    overflow: none !important;
+    // border: 5px solid red;
+
+    // circle 1 for outdoor
+
+    & .cir1 {
+      position: relative;
+      top: 200px;
+      left: 600px;
+      z-index: 0;
+      cursor: pointer;
+      // border: 5px solid red;
+      display: inline-block;
+
+      & .wave-cir-con {
+        position: relative;
+        margin: 0 auto;
+        width: 20px;
+        height: 20px;
+        border-radius: 99px;
+        background-color: white;
+        & .sonar-wave {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 99px;
+          background-color: white;
+          opacity: 0;
+          z-index: -1;
+          pointer-events: none;
+          animation: sonarWave 2s linear infinite;
+          @keyframes sonarWave {
+            from {
+              opacity: 0.4;
+            }
+            to {
+              transform: scale(3);
+              opacity: 0;
+            }
+          }
+        }
+      }
+    }
+
+    // circle hover box start
+
+    .box-1 {
+      width: 165px;
+      height: 220px;
+      background-color: white;
+      border-radius: 10px;
+      align-items: center;
+      display: none;
+      flex-direction: column;
+      padding: 10px;
+      position: relative;
+      top: 200px;
+      left: 420px;
+      // border: 5px solid red;
+
+      & .box-1-1 {
+        & div {
+          font-size: 14px;
+          font-weight: 600;
+        }
+      }
+    }
+    .cir1:hover + .box-1 {
+      display: flex;
+    }
+
+    // circle two for outdoor
+    & .cir2 {
+      position: relative;
+      top: 400px;
+      left: 320px;
+      z-index: 0;
+      // border: 5px solid red;
+      display: inline-block;
+
+      & .wave-cir-con {
+        position: relative;
+        margin: 0 auto;
+        width: 20px;
+        height: 20px;
+        border-radius: 99px;
+        background-color: white;
+        & .sonar-wave {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 99px;
+          background-color: white;
+          opacity: 0;
+          z-index: -1;
+          pointer-events: none;
+          animation: sonarWave 2s linear infinite;
+          @keyframes sonarWave {
+            from {
+              opacity: 0.4;
+            }
+            to {
+              transform: scale(3);
+              opacity: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .box-2 {
+      width: 165px;
+      height: 220px;
+      background-color: white;
+      border-radius: 10px;
+      align-items: center;
+      display: none;
+      padding: 10px;
+      position: relative;
+      flex-direction: column;
+      top: 130px;
+      left: 160px;
+      // border: 5px solid red;
+
+      & .box-2-1 {
+        & div {
+          font-size: 14px;
+          font-weight: 600;
+        }
+      }
+    }
+    .cir2:hover + .box-2 {
+      display: flex;
+    }
+
+    // Circle 3 for outdoor
+
+    & .cir3 {
+      border: 1 px solid black;
+      position: relative;
+      top: 340px;
+      left: 990px;
+      z-index: 0;
+      // border: 5px solid red;
+      display: inline-block;
+
+      & .wave-cir-con {
+        border: 1 px solid black;
+
+        position: relative;
+        margin: 0 auto;
+        width: 20px;
+        height: 20px;
+        border-radius: 99px;
+        background-color: white;
+        & .sonar-wave {
+          border: 1px solid black;
+
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 99px;
+          background-color: white;
+          opacity: 0;
+          z-index: -1;
+          pointer-events: none;
+          animation: sonarWave 2s linear infinite;
+          @keyframes sonarWave {
+            from {
+              opacity: 0.4;
+            }
+            to {
+              transform: scale(3);
+              opacity: 0;
+            }
+          }
+        }
+      }
+    }
+
+    // circle hover box start
+
+    .box-3 {
+      width: 165px;
+      height: 220px;
+      background-color: white;
+      border-radius: 10px;
+      align-items: center;
+      display: none;
+      flex-direction: column;
+      padding: 10px;
+      position: relative;
+      top: 65px;
+      left: 1050px;
+      // border: 5px solid red;
+
+      & .box-3-1 {
+        & div {
+          font-size: 14px;
+          font-weight: 600;
+        }
+      }
+    }
+    .cir3:hover + .box-3 {
+      display: flex;
+    }
+  }
+ 
+}
+@media screen and (max-width:1025px) {
+  .outdoor{
+    div{
+      .out-2{
+        font-size: 24px;
+      }
+    }
+    .outdoor-img{
+      // background-image: url("https://skins.minimog.co/cdn/shop/files/camping_lookbook_2.jpg?v=1659944194&width=1350") ;
+  
+      width: 1024px;
+      overflow-x: hidden;
+      .cir3{
+        left: 600px;
+      }
+    }
+  }
+  
+}
+@media screen and (max-width:769px) {
+  .outdoor{
+    .outdoor-img{
+    background-image: url("https://skins.minimog.co/cdn/shop/files/camping_lookbook_2.jpg?v=1659944194&width=768");
+       background-repeat: no-repeat;
+       height: 400px;
+       width: 768px;
+      overflow-x: hidden;
+      .cir3{
+        left: 600px;
+      }
+    }
+  }
+  
+}
+@media screen and (max-width:426px) {
+
+  body{
+    overflow-x: hidden;
+  }
+  .outdoor{
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    .outdoor-img{
+    background-image: url("https://skins.minimog.co/cdn/shop/files/camping_lookbook_2.jpg?v=1659944194&width=425") !important;
+      width: 424px;
+      height: 200px;
+      overflow-x: hidden;
+    overflow-y: hidden;
+    bac
+
+      .cir3{
+        top: 90px;
+        left: 280px;
+      }
+      .box-3{
+        left: 0px;
+        top: -100px;
+        width: 165px;
+      height: 220px;
+      }
+      
+      .cir2{
+        left: 80px;
+        top: 120px;
+      }
+      .cir1{
+        left: 165px;
+        top: 50px;
+      }
+      .box-2{
+        left: 0px;
+        top: -100px;
+        
+      }
+      .box-1{
+        left: 0px;
+        top: -100px;
+        
+      }
+      .box-3{
+        left: 0px;
+        top: -100px;
+        
+      }
+    }
+  }
+  
+}
+
+// =======outdoor end==========
+
+// gifts start
+
+.gifts {
+  margin-top: 100px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 100px;
+
+  & .gifts-1 {
+    & .gifts-1-2 {
+      font-size: 44px;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      font-weight: 600;
+      margin-top: 30px;
+    }
+  }
+  @keyframes scroll {
+    0% {
+      left: 100%;
+    }
+    100% {
+      left: -100%;
+    }
+  }
+  & .gifts-2 {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+
+    // ================= gifts slide scroll bar strart===========
+    // ==================item 1==================
+
+    & .gifts-2-1 {
+      & .myproducts-2-1-1 {
+        width: 350px;
+        height: 350px;
+        overflow: hidden;
+        & .image-hover {
+          overflow: hidden;
+          background-image: url("https://skins.minimog.co/cdn/shop/products/5_b7ae2b8d-cef6-42c1-9cd5-4e08336c8397.jpg?v=1659521376&width=350");
+          z-index: -1;
+          width: 350px;
+          height: 350px;
+        }
+        & .myproducts-2-1-1-1 {
+          display: flex;
+          flex-direction: column;
+          width: 20px;
+          position: sticky;
+          margin-left: 450px;
+          top: -1000px;
+          & i {
+            font-size: 12px;
+            margin: 5px;
+            width: 15px;
+            height: 15px;
+            padding: 10px;
+            border: 1px solid white;
+            border-radius: 50%;
+            color: black;
+            background-color: white;
+            align-content: center;
+          }
+          & i:hover {
+            border: 1px solid brown;
+            border-radius: 50%;
+            color: white;
+            background-color: brown;
+          }
+        }
+        & .myproducts-2-1-1-2 {
+          font-size: 16px;
+          color: black;
+          position: relative;
+          right: -40px;
+          display: none;
+          top: -220px;
+          padding-left: 100px;
+          padding-right: 100px;
+          background-color: white;
+          border: 1px solid white;
+        }
+        & .myproducts-2-1-1-2:hover {
+          background-color: brown !important;
+          color: white !important;
+          border-color: brown !important;
+          transition: 0s !important;
+        }
+      }
+
+      & .myproducts-2-1-1:hover {
+        & .image-hover {
+          background-image: url("https://skins.minimog.co/cdn/shop/products/5a_3bd8de0e-45b8-4715-a8d0-8dcf93a7f5ba.jpg?v=1659521377&width=350");
+          scale: 1.1;
+          overflow: hidden;
+          transition: 0.6s;
+        }
+      }
+      & .myproducts-2-1-1:hover {
+        & .myproducts-2-1-1-1 {
+          bottom: 100px;
+          margin-left: 300px;
+          transition: 0.6s;
+          z-index: 5;
+        }
+        & .myproducts-2-1-1-2 {
+          font-size: 16px;
+          padding: 20px;
+          color: black;
+          position: relative;
+          right: 0px;
+          display: inline-block;
+          bottom: -130px;
+          padding-left: 100px;
+          padding-right: 100px;
+          background-color: white;
+          border: 1px solid white;
+          transition: 1s !important;
+        }
+      }
+      & .myproducts-2-1-2 {
+        & .myproducts-2-1-2-1 {
+          width: 350px;
+          font-size: 18px;
+          font-weight: 600;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        & .myproducts-2-1-2-2 {
+          color: red;
+          width: 350px;
+          font-size: 18px;
+          font-weight: 600;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          & del {
+            color: black;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+
+    // ==================item 2==================
+
+    & .gifts-2-2 {
+      & .myproducts-2-1-1 {
+        width: 350px;
+        height: 350px;
+        overflow: hidden;
+        & .image-hover {
+          overflow: hidden;
+          background-image: url("https://skins.minimog.co/cdn/shop/products/4_0546b8bb-1c58-43ec-9c45-7892f3cafc1a.jpg?v=1659521331&width=350");
+          z-index: -1;
+          width: 350px;
+          height: 350px;
+        }
+        & .myproducts-2-1-1-1 {
+          display: flex;
+          flex-direction: column;
+          width: 20px;
+          position: sticky;
+          margin-left: 450px;
+          top: -1000px;
+          & i {
+            font-size: 12px;
+            margin: 5px;
+            width: 15px;
+            height: 15px;
+            padding: 10px;
+            border: 1px solid white;
+            border-radius: 50%;
+            color: black;
+            background-color: white;
+            align-content: center;
+          }
+          & i:hover {
+            border: 1px solid brown;
+            border-radius: 50%;
+            color: white;
+            background-color: brown;
+          }
+        }
+        & .myproducts-2-1-1-2 {
+          font-size: 16px;
+          color: black;
+          position: relative;
+          right: -40px;
+          display: none;
+          top: -220px;
+          padding-left: 100px;
+          padding-right: 100px;
+          background-color: white;
+          border: 1px solid white;
+        }
+        & .myproducts-2-1-1-2:hover {
+          background-color: brown !important;
+          color: white !important;
+          border-color: brown !important;
+          transition: 0s !important;
+        }
+      }
+
+      & .myproducts-2-1-1:hover {
+        & .image-hover {
+          background-image: url("https://skins.minimog.co/cdn/shop/products/4a_97e75852-c291-4732-88ce-fd5d2e13f574.jpg?v=1659521331&width=350");
+          scale: 1.1;
+          overflow: hidden;
+          transition: 0.6s;
+        }
+      }
+      & .myproducts-2-1-1:hover {
+        & .myproducts-2-1-1-1 {
+          bottom: 100px;
+          margin-left: 300px;
+          transition: 0.6s;
+          z-index: 5;
+        }
+        & .myproducts-2-1-1-2 {
+          font-size: 16px;
+          padding: 20px;
+          color: black;
+          position: relative;
+          right: 0px;
+          display: inline-block;
+          bottom: -130px;
+          padding-left: 100px;
+          padding-right: 100px;
+          background-color: white;
+          border: 1px solid white;
+          transition: 1s !important;
+        }
+      }
+      & .myproducts-2-1-2 {
+        & .myproducts-2-1-2-1 {
+          width: 350px;
+          font-size: 18px;
+          font-weight: 600;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        & .myproducts-2-1-2-2 {
+          color: red;
+          width: 350px;
+          font-size: 18px;
+          font-weight: 600;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          & del {
+            color: black;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+
+    // ==================item 3==================
+
+    & .gifts-2-3 {
+      & .myproducts-2-1-1 {
+        width: 350px;
+        height: 350px;
+        overflow: hidden;
+        & .image-hover {
+          overflow: hidden;
+          background-image: url("https://skins.minimog.co/cdn/shop/products/8_bb65e3ab-2272-4df6-aa19-eca480a5f43f.jpg?v=1659521268&width=350");
+          z-index: -1;
+          width: 350px;
+          height: 350px;
+        }
+        & .myproducts-2-1-1-1 {
+          display: flex;
+          flex-direction: column;
+          width: 20px;
+          position: sticky;
+          margin-left: 450px;
+          top: -1000px;
+          & i {
+            font-size: 12px;
+            margin: 5px;
+            width: 15px;
+            height: 15px;
+            padding: 10px;
+            border: 1px solid white;
+            border-radius: 50%;
+            color: black;
+            background-color: white;
+            align-content: center;
+          }
+          & i:hover {
+            border: 1px solid brown;
+            border-radius: 50%;
+            color: white;
+            background-color: brown;
+          }
+        }
+        & .myproducts-2-1-1-2 {
+          font-size: 16px;
+          color: black;
+          position: relative;
+          right: -40px;
+          display: none;
+          top: -220px;
+          padding-left: 100px;
+          padding-right: 100px;
+          background-color: white;
+          border: 1px solid white;
+        }
+        & .myproducts-2-1-1-2:hover {
+          background-color: brown !important;
+          color: white !important;
+          border-color: brown !important;
+          transition: 0s !important;
+        }
+      }
+
+      & .myproducts-2-1-1:hover {
+        & .image-hover {
+          background-image: url("https://skins.minimog.co/cdn/shop/products/8_bb65e3ab-2272-4df6-aa19-eca480a5f43f.jpg?v=1659521268&width=350");
+          scale: 1.1;
+          overflow: hidden;
+          transition: 0.6s;
+        }
+      }
+      & .myproducts-2-1-1:hover {
+        & .myproducts-2-1-1-1 {
+          bottom: 100px;
+          margin-left: 300px;
+          transition: 0.6s;
+          z-index: 5;
+        }
+        & .myproducts-2-1-1-2 {
+          font-size: 16px;
+          padding: 20px;
+          color: black;
+          position: relative;
+          right: 0px;
+          display: inline-block;
+          bottom: -130px;
+          padding-left: 100px;
+          padding-right: 100px;
+          background-color: white;
+          border: 1px solid white;
+          transition: 1s !important;
+        }
+      }
+      & .myproducts-2-1-2 {
+        & .myproducts-2-1-2-1 {
+          width: 350px;
+          font-size: 18px;
+          font-weight: 600;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        & .myproducts-2-1-2-2 {
+          color: red;
+          width: 350px;
+          font-size: 18px;
+          font-weight: 600;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          & del {
+            color: black;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+
+    // ==================item 4==================
+    & .gifts-2-4 {
+      & .myproducts-2-1-1 {
+        width: 350px;
+        height: 350px;
+        overflow: hidden;
+        & .image-hover {
+          overflow: hidden;
+          background-image: url("https://skins.minimog.co/cdn/shop/products/7_d87333d2-c974-48f9-a9b4-58b1a63098af.jpg?v=1659521472&width=350");
+          z-index: -1;
+          width: 350px;
+          height: 350px;
+        }
+        & .myproducts-2-1-1-1 {
+          display: flex;
+          flex-direction: column;
+          width: 20px;
+          position: sticky;
+          margin-left: 450px;
+          top: -1000px;
+          & i {
+            font-size: 12px;
+            margin: 5px;
+            width: 15px;
+            height: 15px;
+            padding: 10px;
+            border: 1px solid white;
+            border-radius: 50%;
+            color: black;
+            background-color: white;
+            align-content: center;
+          }
+          & i:hover {
+            border: 1px solid brown;
+            border-radius: 50%;
+            color: white;
+            background-color: brown;
+          }
+        }
+        & .myproducts-2-1-1-2 {
+          font-size: 16px;
+          color: black;
+          position: relative;
+          right: -40px;
+          display: none;
+          top: -220px;
+          padding-left: 100px;
+          padding-right: 100px;
+          background-color: white;
+          border: 1px solid white;
+        }
+        & .myproducts-2-1-1-2:hover {
+          background-color: brown !important;
+          color: white !important;
+          border-color: brown !important;
+          transition: 0s !important;
+        }
+      }
+
+      & .myproducts-2-1-1:hover {
+        & .image-hover {
+          background-image: url("https://skins.minimog.co/cdn/shop/products/7a_de92a828-43f6-4914-b050-f88e61d6cac1.jpg?v=1659521476&width=350");
+          scale: 1.1;
+          overflow: hidden;
+          transition: 0.6s;
+        }
+      }
+      & .myproducts-2-1-1:hover {
+        & .myproducts-2-1-1-1 {
+          bottom: 100px;
+          margin-left: 300px;
+          transition: 0.6s;
+          z-index: 5;
+        }
+        & .myproducts-2-1-1-2 {
+          font-size: 16px;
+          padding: 20px;
+          color: black;
+          position: relative;
+          right: 0px;
+          display: inline-block;
+          bottom: -130px;
+          padding-left: 100px;
+          padding-right: 100px;
+          background-color: white;
+          border: 1px solid white;
+          transition: 1s !important;
+        }
+      }
+      & .myproducts-2-1-2 {
+        & .myproducts-2-1-2-1 {
+          width: 350px;
+          font-size: 18px;
+          font-weight: 600;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        & .myproducts-2-1-2-2 {
+          color: red;
+          width: 350px;
+          font-size: 18px;
+          font-weight: 600;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          & del {
+            color: black;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+
+    // ==================item 5==================
+    & .gifts-2-5 {
+      & .myproducts-2-1-1 {
+        width: 350px;
+        height: 350px;
+        overflow: hidden;
+        & .image-hover {
+          overflow: hidden;
+          background-image: url("https://skins.minimog.co/cdn/shop/products/6_e6a59e04-cd8e-4bf5-86f6-3ca99ea736e2.jpg?v=1659521425&width=350");
+          z-index: -1;
+          width: 350px;
+          height: 350px;
+        }
+        & .myproducts-2-1-1-1 {
+          display: flex;
+          flex-direction: column;
+          width: 20px;
+          position: sticky;
+          margin-left: 450px;
+          top: -1000px;
+          & i {
+            font-size: 12px;
+            margin: 5px;
+            width: 15px;
+            height: 15px;
+            padding: 10px;
+            border: 1px solid white;
+            border-radius: 50%;
+            color: black;
+            background-color: white;
+            align-content: center;
+          }
+          & i:hover {
+            border: 1px solid brown;
+            border-radius: 50%;
+            color: white;
+            background-color: brown;
+          }
+        }
+        & .myproducts-2-1-1-2 {
+          font-size: 16px;
+          color: black;
+          position: relative;
+          right: -40px;
+          display: none;
+          top: -220px;
+          padding-left: 100px;
+          padding-right: 100px;
+          background-color: white;
+          border: 1px solid white;
+        }
+        & .myproducts-2-1-1-2:hover {
+          background-color: brown !important;
+          color: white !important;
+          border-color: brown !important;
+          transition: 0s !important;
+        }
+      }
+
+      & .myproducts-2-1-1:hover {
+        & .image-hover {
+          background-image: url("https://skins.minimog.co/cdn/shop/products/6a_9f91395e-0023-4c83-b105-73356b72c445.jpg?v=1659521425&width=350");
+          scale: 1.1;
+          overflow: hidden;
+          transition: 0.6s;
+        }
+      }
+      & .myproducts-2-1-1:hover {
+        & .myproducts-2-1-1-1 {
+          bottom: 100px;
+          margin-left: 300px;
+          transition: 0.6s;
+          z-index: 5;
+        }
+        & .myproducts-2-1-1-2 {
+          font-size: 16px;
+          padding: 20px;
+          color: black;
+          position: relative;
+          right: 0px;
+          display: inline-block;
+          bottom: -130px;
+          padding-left: 100px;
+          padding-right: 100px;
+          background-color: white;
+          border: 1px solid white;
+          transition: 1s !important;
+        }
+      }
+      & .myproducts-2-1-2 {
+        & .myproducts-2-1-2-1 {
+          width: 350px;
+          font-size: 18px;
+          font-weight: 600;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        & .myproducts-2-1-2-2 {
+          color: red;
+          width: 350px;
+          font-size: 18px;
+          font-weight: 600;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          & del {
+            color: black;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  // ============== scroll end==============
+
+  & .gifts-3 {
+    font-size: 16px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    border: 1px solid black;
+    display: flex;
+    justify-self: center !important;
+    align-self: center !important;
+
+    & a {
+      text-decoration: none;
+      color: black;
+      padding: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  & .gifts-3:hover {
+    background-color: brown;
+    transition: 0.6s;
+
+    & a {
+      color: white;
+      transition: 0.6s;
+    }
+  }
+  & .gifts-2::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media screen and (max-width:1025px) {
+  .gifts{
+      height: auto;
+      .gifts-2{
+          margin-left: 80px;
+          margin-right: 0px;
+          div{
+              div{
+                  .myproducts-2-1-1-2:hover{
+                      bottom: 200px;
+                  }
+              }
+          }
+
+      }
+  }
+  
+}
+@media screen and (max-width:426px) {
+  .gifts{
+      height: auto;
+      .gifts-2{
+          margin-left: 30px;
+          margin-right: 30px;
+          div{
+              div{
+                  .myproducts-2-1-1-2:hover{
+                      bottom: 200px;
+                  }
+              }
+          }
+
+      }
+  }
+  
+}
+
+
+// ================== gifts end====================
+
+// =================footer start=====================
+.footer {
+  overflow-x: hidden;
+padding-top: 50px;
+padding-left: 20px;
+padding-right: 20px;
+display: grid;
+grid-template-columns: auto auto auto auto;
+background-color: #360505;
+
+
+& .f-1 {
+  width: 430px;
+  & .f-1-1 {
+    & a {
+      font-size: 40px;
+      font-weight: 600;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      color: white;
+      padding-bottom: 10px;
+      text-decoration: none;
+    }
+  }
+  & .f-1-2 {
+    font-size: 18px;
+    font-weight: 600px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    color: #c9c9c9;
+    padding-bottom: 20px;
+  }
+
+  & .f-1-3 {
+    background-color: #504d48;
+    border: 1px solid #504d48;
+
+    & input[type="email"] {
+      background-color: #504d48;
+      margin-left: 55px;
+      width: 200px;
+      padding: 10px;
+      align-items: center;
+      -webkit-transition: width 0.35s ease-in-out;
+      transition: width 0.35s ease-in-out;
+      color: white;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      font-size: 18px;
+      border: none;
+    }
+    input[type="email"]:focus {
+      width: 320px;
+      outline: none;
+    }
+    ::placeholder {
+      background-color: #504d48;
+      color: white;
+      font-size: 18px;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      padding-left: 50px;
+    }
+
+    & .icon1 {
+      background-color: #504d48;
+      position: absolute;
+      margin-top: 5px;
+      margin-left: 20px;
+      font-size: 20px;
+      color: red;
+      padding: 9px;
+    }
+    & .icon2 {
+      background-color: #504d48;
+      position: absolute;
+      margin-top: 0px;
+      margin-left: 380px;
+      font-size: 20px;
+      color: red;
+      padding: 13px;
+      text-decoration: none;
+    }
+    & .icon2:hover {
+      background-color: white;
+      padding: 13px;
+    }
+  }
+}
+
+& .f-2 {
+  & .f-2-1 {
+    margin-bottom: 20px;
+
+    & a {
+      color: white;
+      font-size: 18px;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      text-decoration: none;
+    }
+  }
+  & .f-2-2 {
+      margin-bottom: 10px;
+
+      & a {
+        color: #c9c9c9;
+        font-size: 18px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    .f-2-2 a::after {
+      content: " ";
+      width: 0%;
+      height: 2px;
+      background-color: white;
+      color: white;
+    }
+    .f-2-2 a:hover::after {
+      width:50%;
+      transition: 0.6s;
+    }
+}
+& .f-3 {
+  & .f-3-1 {
+    margin-bottom: 20px;
+
+    & a {
+      color: white;
+      font-size: 18px;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      text-decoration: none;
+    }
+  }
+  & .f-3-2 {
+    color: #c9c9c9;
+    font-size: 18px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    margin-bottom: 10px;
+  }
+}
+
+& .f-4 {
+  & .f-4-1 {
+    margin-bottom: 20px;
+
+    & a {
+      color: white;
+      font-size: 18px;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      text-decoration: none;
+    }
+  }
+  & .f-4-2 {
+    & a {
+      text-decoration: none;
+      & i {
+        color: #c9c9c9;
+        font-size: 18px;
+        padding: 5px;
+        margin-bottom: 10px;
+        color: #c9c9c9;
+      }
+    }
+  }
+}
+}
+@media screen and (max-width:1025px) {
+  .footer{
+    padding-left: 20px;
+      display: grid;
+      grid-template-columns: auto auto;
+  }
+}
+@media screen and (max-width:769px) {
+  .footer{
+    padding-left: 20px;
+      display: grid;
+      grid-template-columns: auto auto;
+  }
+}
+@media screen and (max-width:426px) {
+  .footer{
+    padding-left: 20px;
+
+      display: grid;
+      grid-template-columns: auto;
+      .f-1{
+          width: 400px;
+          .f-1-3{
+            .icon2{
+                margin-left: 350px;
+            }
+        }
+      }
+  }
+}
+@media screen and (max-width:376px) {
+  .footer{
+    padding-left: 20px;
+
+      display: grid;
+      grid-template-columns: auto;
+      .f-1{
+  width: 375px;
+
+          .f-1-3{
+              .icon2{
+                  margin-left: 320px;
+              }
+          }
+      }
+  }
+}
+@media screen and (max-width:321px) {
+  .footer{
+    padding-left: 20px;
+
+      display: grid;
+      grid-template-columns: auto;
+      .f-1{
+  width: 320px;
+
+          .f-1-3{
+              .icon2{
+                  margin-left: 260px;
+              }
+          }
+      }
+  }
+}
+
