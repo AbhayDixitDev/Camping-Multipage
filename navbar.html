@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wildlands</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      margin: 0;
+      font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+    .navbar {
+      background-color: #333;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 20px;
+    }
+    .navbar a:hover {
+      text-decoration: underline;
+      color: red;
+    }
+    .navbar .logo img {
+        width: 80px;
+      font-weight: bold;
+    }
+    .navbar .icons {
+      display: flex;
+      align-items: center;
+    }
+    .navbar .icons a i {
+      margin-right: 15px;
+      font-size: 20px;
+      
+    }
+    .navbar .icons a i:hover{
+        color: red;
+        scale: 1.2;
+    }
+    .navbar .icons .cart {
+      position: relative;
+    }
+    .navbar .icons .cart i {
+      color: white;
+      margin-right: 15px;
+      font-size: 20px;
+    }
+    .navbar .icons .cart i:hover {
+      color: red;
+        scale: 1.2;
+    }
+    .navbar .icons .cart .badge {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      background-color: #ff5722;
+      color: #fff;
+      font-size: 12px;
+      padding: 2px 5px;
+      border-radius: 50%;
+    }
+    #menu{
+        margin-left: 80px;
+        margin-top: 15px;
+    background-color: #333;
+    animation: all ease-in-out;
+}
+.dropdown-content {
+  display: block;
+  position: absolute;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  padding: 10px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 5px 10px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color:#333;
+  color: white;
+}
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div>
+      <a href="./multipage.html" onmouseenter="navbar(1)">Home</a>
+      <a href="./products.html" onmouseenter="navbar(2)">Shop</a>
+      <a href="#" onmouseenter="navbar(3)">Blog</a>
+      <a href="#" onmouseenter="navbar(4)">Pages</a>
+    </div>
+    <div class="logo"><img src="https://skins.minimog.co/cdn/shop/files/camping_logo.png?v=1659945085&width=250" alt=""></div>
+    <div class="icons">
+      <a href="./account.html"><i class="fas fa-user" ></i></a>
+     <a href="#"> <i class="fas fa-search"></i></a>
+     <a href="#"> <i class="fas fa-star"></i></a>
+      <div class="cart">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="badge">0</span>
+      </div>
+    </div>
+  </nav>
+  <div id="menu" onmouseleave="navbar(0)"> 
+<script src="./navbar.js"></script>
+</body>
+</html>

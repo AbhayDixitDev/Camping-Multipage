@@ -184,7 +184,7 @@ body::-webkit-scrollbar {
       .hero .nav-main .nav .nav-right ul li {
         padding: 10px; }
     .hero .nav-main .nav .nav-right ul li i {
-      color: black; }
+      color: red; }
     .hero .nav-main .nav .nav-right ul li:hover i {
       color: red; }
 
